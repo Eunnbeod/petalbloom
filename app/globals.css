@@ -2302,3 +2302,270 @@ transform:translateY(0);
     font-size:16px;
 
 }
+
+
+/* ===================================================== */
+/* MOBILE RESPONSIVE */
+/* ===================================================== */
+
+@media (max-width: 768px) {
+
+  /* NAVBAR */
+
+  .navbar{
+    padding:16px 20px;
+  }
+
+  .logo{
+    height:55px;
+  }
+
+  .makeGiftBtn{
+    padding:10px 18px;
+    font-size:14px;
+  }
+
+  /* HERO */
+
+  .hero{
+    flex-direction:column;
+    text-align:center;
+    padding:40px 20px;
+    min-height:auto;
+    gap:30px;
+  }
+
+  .heroText{
+    max-width:100%;
+  }
+
+  .hero h1{
+    font-size:42px;
+    line-height:1.2;
+  }
+
+  .description{
+    font-size:16px;
+    margin-bottom:30px;
+  }
+
+  .heroButtons{
+    flex-direction:column;
+    width:100%;
+    gap:15px;
+  }
+
+  .primaryBtn,
+  .secondaryBtn{
+    width:100%;
+  }
+
+  .mainBouquet{
+    width:100%;
+    max-width:340px;
+  }
+
+  .flower{
+    width:60px;
+  }
+
+  /* TEMPLATE */
+
+  .templateSection{
+    padding:70px 20px;
+  }
+
+  .templateGrid{
+    grid-template-columns:1fr;
+    gap:25px;
+  }
+
+  .templateCard img{
+    height:260px;
+  }
+
+  /* HOW IT WORKS */
+
+  .howSection{
+    padding:70px 20px;
+  }
+
+  .stepArrow{
+    display:none;
+  }
+
+  .stepBox{
+    width:100%;
+  }
+
+  /* WHY */
+
+  .whySection{
+    padding:70px 20px;
+  }
+
+  .whyGrid{
+    grid-template-columns:1fr;
+  }
+
+  /* FAQ */
+
+  .faqSection{
+    padding:70px 20px;
+  }
+
+  .faqItem{
+    padding:25px;
+  }
+
+  /* FOOTER */
+
+  .footer{
+    padding:50px 20px 25px;
+  }
+
+  .footerTop{
+    flex-direction:column;
+    gap:40px;
+  }
+
+  .footerLinks{
+    flex-direction:column;
+    gap:30px;
+  }
+
+}
+
+/* ================= MOBILE NAVBAR ================= */
+
+.menuButton{
+  display:none;
+}
+
+@media (max-width:768px){
+
+  .navbar{
+
+    padding:16px 20px;
+
+    position:sticky;
+
+  }
+
+  .logo{
+
+    height:55px;
+
+  }
+
+  .menuButton{
+
+    display:block;
+
+    background:none;
+
+    border:none;
+
+    font-size:34px;
+
+    cursor:pointer;
+
+    color:#F28BB2;
+
+    z-index:1001;
+
+  }
+
+  .makeGiftBtn{
+
+    display:none;
+
+  }
+
+  .navLinks{
+
+    position:absolute;
+
+    top:100%;
+
+    left:0;
+
+    width:100%;
+
+    background:white;
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    gap:22px;
+
+    padding:30px 0;
+
+    box-shadow:0 15px 30px rgba(0,0,0,.08);
+
+    transform:translateY(-20px);
+
+    opacity:0;
+
+    visibility:hidden;
+
+    transition:.3s;
+
+  }
+
+  .navLinks.active{
+
+    transform:translateY(0);
+
+    opacity:1;
+
+    visibility:visible;
+
+  }
+
+  .navButton{
+
+    background:none;
+
+    border:none;
+
+    font-size:18px;
+
+    color:#444;
+
+    cursor:pointer;
+
+  }
+
+}
+
+.makeGiftMobile{
+
+  background:#E98DA9;
+
+  color:white;
+
+  border:none;
+
+  border-radius:999px;
+
+  padding:14px 28px;
+
+  font-size:16px;
+
+  cursor:pointer;
+
+}
+
+@media (min-width:769px){
+
+  .makeGiftMobile{
+
+    display:none;
+
+  }
+
+}

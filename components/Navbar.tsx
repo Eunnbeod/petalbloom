@@ -1,11 +1,13 @@
 "use client";
 
+import { useState } from "react";
 import { useRouter } from "next/navigation";
 
 export default function Navbar() {
 
   const router = useRouter();
-
+  const [menuOpen, setMenuOpen] = useState(false);
+  
   return (
 
     <nav className="navbar">
@@ -17,14 +19,13 @@ export default function Navbar() {
         onClick={() => router.push("/")}
       />
 
-      <div className="navLinks">
+      <div className={`navLinks ${menuOpen ? "active" : ""}`}>
 
         <button
           className="navButton"
           onClick={() => {
-            document
-              .getElementById("home")
-              ?.scrollIntoView({ behavior: "smooth" });
+            setMenuOpen(false);
+            document.getElementById("home")?.scrollIntoView({ behavior: "smooth" });
           }}
         >
           Home
@@ -32,7 +33,10 @@ export default function Navbar() {
 
         <button
           className="navButton"
-          onClick={() => router.push("/templates")}
+          onClick={() => {
+            setMenuOpen(false);
+            router.push("/templates");
+          }}
         >
           Templates
         </button>
@@ -40,9 +44,8 @@ export default function Navbar() {
         <button
           className="navButton"
           onClick={() => {
-            document
-              .getElementById("how-it-works")
-              ?.scrollIntoView({ behavior: "smooth" });
+            setMenuOpen(false);
+            document.getElementById("how-it-works")?.scrollIntoView({ behavior: "smooth" });
           }}
         >
           How it Works
@@ -51,9 +54,8 @@ export default function Navbar() {
         <button
           className="navButton"
           onClick={() => {
-            document
-              .getElementById("faq")
-              ?.scrollIntoView({ behavior: "smooth" });
+            setMenuOpen(false);
+            document.getElementById("faq")?.scrollIntoView({ behavior: "smooth" });
           }}
         >
           FAQ
@@ -62,15 +64,30 @@ export default function Navbar() {
         <button
           className="navButton"
           onClick={() => {
-            document
-              .getElementById("contact")
-              ?.scrollIntoView({ behavior: "smooth" });
+            setMenuOpen(false);
+            document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" });
           }}
         >
           Contact
         </button>
 
+        <button
+          className="makeGiftMobile"
+          onClick={() => {
+            setMenuOpen(false);
+            router.push("/templates");
+          }}
+        >
+          Create Gift
+        </button>
+
       </div>
+      <button
+        className="menuButton"
+        onClick={() => setMenuOpen(!menuOpen)}
+      >
+        ☰
+      </button>
 
       <button
         className="makeGiftBtn"
