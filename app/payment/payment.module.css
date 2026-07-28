@@ -1,0 +1,311 @@
+.paymentPage{
+
+    min-height:100vh;
+
+    background:#FFF7FA;
+
+    display:flex;
+
+    justify-content:center;
+
+    padding:80px 20px;
+
+}
+
+.paymentContainer{
+
+    width:100%;
+
+    max-width:900px;
+
+}
+
+.paymentHeader{
+
+    text-align:center;
+
+    margin-bottom:40px;
+
+}
+
+.paymentHeader p{
+
+    color:#F28BB2;
+
+    font-weight:700;
+
+    margin-bottom:10px;
+
+}
+
+.paymentHeader h1{
+
+    font-size:48px;
+
+    color:#2C2C2C;
+
+    margin-bottom:12px;
+
+}
+
+.paymentHeader span{
+
+    color:#777;
+
+    font-size:18px;
+
+}
+
+.successPage{
+
+    min-height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:#FFF7FA;
+
+    padding:40px;
+
+}
+
+.successCard{
+
+    width:100%;
+
+    max-width:650px;
+
+    background:white;
+
+    border-radius:28px;
+
+    padding:50px;
+
+    text-align:center;
+
+    box-shadow:0 20px 60px rgba(0,0,0,.08);
+
+}
+
+.successIcon{
+
+    font-size:70px;
+
+    margin-bottom:20px;
+
+}
+
+.successCard h1{
+
+    margin-bottom:12px;
+
+}
+
+.successCard p{
+
+    color:#777;
+
+}
+
+.giftLinkBox{
+
+    margin:35px 0;
+
+    padding:20px;
+
+    border-radius:18px;
+
+    background:#FFF0F5;
+
+}
+
+.giftLinkBox span{
+
+    display:block;
+
+    margin-top:10px;
+
+    font-weight:700;
+
+    word-break:break-all;
+
+}
+
+.successButtons{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:15px;
+
+}
+
+.successButtons button{
+
+    width:100%;
+
+    border:none;
+
+    border-radius:16px;
+
+    padding:16px;
+
+    cursor:pointer;
+
+    background:#F28BB2;
+
+    color:white;
+
+    font-size:16px;
+
+    font-weight:600;
+
+}
+
+.secondaryButton{
+
+    background:#ECECEC !important;
+
+    color:#333 !important;
+
+}
+
+.successPage{
+
+    min-height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:#FFF7FA;
+
+    padding:40px;
+
+}
+
+.successCard{
+
+    width:100%;
+
+    max-width:650px;
+
+    background:white;
+
+    border-radius:28px;
+
+    padding:50px;
+
+    text-align:center;
+
+    box-shadow:0 20px 60px rgba(0,0,0,.08);
+
+}
+
+.successIcon{
+
+    font-size:70px;
+
+    margin-bottom:20px;
+
+}
+
+.successCard h1{
+
+    font-size:42px;
+
+    color:#2C2C2C;
+
+    margin-bottom:15px;
+
+}
+
+.successCard p{
+
+    color:#777;
+
+}
+
+.giftLinkBox{
+
+    background:#FFF0F5;
+
+    padding:22px;
+
+    border-radius:18px;
+
+    margin:35px 0;
+
+}
+
+.giftLinkBox p{
+
+    margin-bottom:10px;
+
+    font-weight:600;
+
+}
+
+.giftLinkBox span{
+
+    font-weight:700;
+
+    color:#F28BB2;
+
+    word-break:break-all;
+
+}
+
+.successButtons{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:16px;
+
+}
+
+.successButtons button{
+
+    width:100%;
+
+    padding:18px;
+
+    border:none;
+
+    border-radius:16px;
+
+    cursor:pointer;
+
+    font-size:16px;
+
+    font-weight:700;
+
+    background:#F28BB2;
+
+    color:white;
+
+    transition:.3s;
+
+}
+
+.successButtons button:hover{
+
+    transform:translateY(-3px);
+
+}
+
+.secondaryButton{
+
+    background:#EFEFEF !important;
+
+    color:#333 !important;
+
+}

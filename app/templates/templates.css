@@ -1,0 +1,215 @@
+.templatesPage{
+    min-height:100vh;
+    background:#fff8f8;
+    padding:80px 8%;
+}
+
+.templatesHero{
+    text-align:center;
+    margin-bottom:60px;
+}
+
+.templatesHero h1{
+    font-size:48px;
+    margin-bottom:15px;
+    color:#2d2d2d;
+}
+
+.templatesHero p{
+    color:#666;
+    font-size:18px;
+    margin-bottom:30px;
+}
+
+.templatesHero input{
+
+    width:100%;
+    max-width:550px;
+
+    padding:18px 22px;
+
+    border-radius:18px;
+
+    border:1px solid #ececec;
+
+    outline:none;
+
+    font-size:16px;
+
+    transition:.3s;
+
+}
+
+.templatesHero input:focus{
+
+    border-color:#ff6b9d;
+
+    box-shadow:0 0 0 4px rgba(255,107,157,.12);
+
+}
+
+
+.categoryButtons{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:15px;
+
+    margin-top:30px;
+
+    flex-wrap:wrap;
+
+}
+
+.categoryButtons button{
+
+    padding:12px 22px;
+
+    border:none;
+
+    border-radius:999px;
+
+    background:white;
+
+    cursor:pointer;
+
+    transition:.25s;
+
+    font-weight:600;
+
+    box-shadow:0 8px 20px rgba(0,0,0,.05);
+
+}
+
+.categoryButtons button:hover{
+
+    background:#ff6b9d;
+
+    color:white;
+
+}
+
+
+.templatesGrid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+
+    gap:35px;
+
+}
+
+
+.templateCard{
+
+    background:white;
+
+    border-radius:25px;
+
+    overflow:hidden;
+
+    box-shadow:0 20px 40px rgba(0,0,0,.06);
+
+    transition:.3s;
+
+}
+
+.templateCard:hover{
+
+    transform:translateY(-10px);
+
+}
+
+.templateCard img{
+
+    width:100%;
+
+    height:250px;
+
+    object-fit:cover;
+
+}
+
+
+.templateCard h2{
+
+    margin:20px;
+
+    margin-bottom:10px;
+
+}
+
+.templateCard p{
+
+    margin:0 20px;
+
+    color:#666;
+
+    line-height:1.7;
+
+    min-height:60px;
+
+}
+
+
+.templateCard span{
+
+    display:inline-block;
+
+    margin:20px 20px 0;
+
+    padding:8px 14px;
+
+    border-radius:999px;
+
+    background:#ffe4ef;
+
+    color:#ff4b88;
+
+    font-weight:600;
+
+    font-size:14px;
+
+}
+
+
+.templateCard button{
+
+    margin:25px 20px 20px;
+
+    width:calc(100% - 40px);
+
+    padding:15px;
+
+    border:none;
+
+    border-radius:14px;
+
+    background:#ff6b9d;
+
+    color:white;
+
+    font-size:15px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.templateCard button:hover{
+
+    transform:translateY(-2px);
+
+}
+
+.templateCard button:disabled{
+
+    background:#d8d8d8;
+
+    cursor:not-allowed;
+
+}
