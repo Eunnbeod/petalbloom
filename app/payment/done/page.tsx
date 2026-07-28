@@ -1,16 +1,17 @@
 "use client";
 
+import { Suspense } from "react";
 import { useSearchParams } from "next/navigation";
 import Link from "next/link";
 import styles from "../payment.module.css";
 
-export default function DonePage() {
+function DoneContent() {
 
   const searchParams = useSearchParams();
 
-const id = searchParams.get("id");
+  const id = searchParams.get("id");
 
-const giftLink = `https://petalbloom.vercel.app/gift/${id}/open`;
+  const giftLink = `https://petalbloom.vercel.app/gift/${id}/open`;
 
   return (
 
@@ -32,37 +33,29 @@ const giftLink = `https://petalbloom.vercel.app/gift/${id}/open`;
 
           <p>Your Gift Link</p>
 
-          <span>
-            {giftLink}
-          </span>
+          <span>{giftLink}</span>
 
         </div>
 
         <div className={styles.successButtons}>
 
           <button
-          onClick={() => {
-            navigator.clipboard.writeText(giftLink);
-            alert("Gift Link Copied!");
-          }}
+            onClick={() => {
+              navigator.clipboard.writeText(giftLink);
+              alert("Gift Link Copied!");
+            }}
           >
             Copy Link
           </button>
 
-          <Link href={giftLink.replace("https://petalbloom.vercel.app", "")}>
-
-            <button>
-              Preview Gift
-            </button>
-
+          <Link href={`/gift/${id}/open`}>
+            <button>Preview Gift</button>
           </Link>
 
           <Link href="/create">
-
             <button className={styles.secondaryButton}>
               Create Another
             </button>
-
           </Link>
 
         </div>
@@ -70,6 +63,20 @@ const giftLink = `https://petalbloom.vercel.app/gift/${id}/open`;
       </div>
 
     </main>
+
+  );
+
+}
+
+export default function DonePage() {
+
+  return (
+
+    <Suspense fallback={<p>Loading...</p>}>
+
+      <DoneContent />
+
+    </Suspense>
 
   );
 
