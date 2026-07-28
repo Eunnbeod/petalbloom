@@ -2569,3 +2569,92 @@ transform:translateY(0);
   }
 
 }
+
+
+/* ===================================== */
+/* HEART OF MEMORIES MOBILE */
+/* ===================================== */
+
+@media (max-width:768px){
+
+  .heartPage{
+
+    grid-template-columns:1fr;
+
+    padding:20px;
+
+    gap:25px;
+
+  }
+
+  .heartPreview{
+
+    position:static;
+
+    order:-1;
+
+  }
+
+  .heartForm{
+
+    gap:18px;
+
+  }
+
+  .customCard{
+
+    padding:24px;
+
+    border-radius:18px;
+
+  }
+
+  .customCard h2{
+
+    font-size:24px;
+
+  }
+
+  .cardDescription{
+
+    font-size:15px;
+
+  }
+
+  .optionGroup{
+
+    flex-direction:column;
+
+  }
+
+  .optionGroup button{
+
+    width:100%;
+
+  }
+
+}
+
+/* ================= PAYMENT MOBILE ================= */
+
+@media (max-width:768px){
+
+  .paymentFooter{
+
+    flex-direction:column;
+
+    gap:14px;
+
+  }
+
+  .paymentFooter button{
+
+    width:100%;
+
+    padding:14px 20px;
+
+    font-size:15px;
+
+  }
+
+}
