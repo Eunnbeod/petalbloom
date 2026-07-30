@@ -1,6 +1,5 @@
 "use client";
 
-import { useSearchParams } from "next/navigation";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { useGift } from "@/context/GiftContext";
@@ -8,13 +7,13 @@ import { createGift } from "@/lib/giftService";
 
 export default function DonatePaymentPage() {
 
-    const searchParams = useSearchParams();
+    
 
     const router = useRouter();
 
     const { gift } = useGift();
 
-    const amount = searchParams.get("amount");
+    
 
     const [method, setMethod] = useState("");
 
