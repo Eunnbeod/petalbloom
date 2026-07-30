@@ -11,9 +11,10 @@ const templates = [
     title:"Heart of Memories",
     category:"Love",
     premium:true,
-    available:true,
+    available:false,
     image:"/templates/heart.jpg",
-    description:"Open heartfelt letters before discovering your bouquet."
+    description:"Open heartfelt letters before discovering your bouquet.",
+    preview : "/gift/heart_of_memories"
   },
 
   {
@@ -21,9 +22,10 @@ const templates = [
     title:"Simple Bouquet",
     category:"Free",
     premium:false,
-    available:false,
+    available:true,
     image:"/templates/free.jpg",
-    description:"A simple free digital bouquet."
+    description:"A simple free digital bouquet.",
+    preview : "/gift/preview"
   },
 
   {
@@ -33,7 +35,8 @@ const templates = [
     premium:true,
     available:false,
     image:"/templates/orbit.jpg",
-    description:"Memories revolve beautifully before blooming."
+    description:"Memories revolve beautifully before blooming.",
+    preview : "/gift/orbit_of_memories"
   }
 
 ];
@@ -132,17 +135,29 @@ export default function TemplatesPage(){
 
                         <div className="templateButtons">
 
-                            <button
-                                className="previewButton"
-                                onClick={() => router.push("/gift/demo")}
-                            >
-                                Preview
-                            </button>
+                            {template.available && (
+                                <button
+                                    className="previewButton"
+                                    onClick={() => router.push(template.preview)}
+                                >
+                                    Preview
+                                </button>
+                            )}
 
                             <button
                                 className="useButton"
                                  disabled={!template.available}
-                                 onClick={() => router.push("/create/heart-of-memories")}
+                                 onClick={() => {
+                                    
+                                    if (template.title === "Simple Bouquet") {
+                                        router.push("/create/free")
+                                    }
+                                    if (template.title === "Heart of Memories") {
+                                        router.push("/create/heart-of-memories")
+                                    }
+                                 
+                                    
+                                }}
                             >
                                 {template.available
                                     ? "Use Template"

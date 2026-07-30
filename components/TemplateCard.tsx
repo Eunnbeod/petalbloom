@@ -31,7 +31,7 @@ export default function TemplateCard({ template }: any) {
 
                 <button
                     className="previewButton"
-                    onClick={() => router.push("/gift/demo")}
+                    onClick={() => router.push("/gift/preview")}
                 >
                     Preview
                 </button>

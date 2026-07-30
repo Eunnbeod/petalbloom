@@ -9,7 +9,7 @@ export default function BouquetLayer() {
     return (
 
         <img
-            src={`/templates/heart_of_memories/bouquet${gift.bouquet}.png`}
+            src={`/bouquets/bouquet${gift.bouquet}.png`}
             className="bouquetLayer"
             alt="Bouquet"
         />

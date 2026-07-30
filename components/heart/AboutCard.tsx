@@ -33,6 +33,13 @@ export default function AboutCard() {
       <input
         type="text"
         placeholder="Type sender name..."
+        value={gift.sender}
+        onChange={(e) =>
+          setGift({
+            ...gift,
+            sender: e.target.value,
+          })
+        }
       />
 
     </div>

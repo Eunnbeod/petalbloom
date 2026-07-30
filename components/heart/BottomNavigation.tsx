@@ -10,19 +10,27 @@ export default function BottomNavigation() {
 
         <div className="bottomNavigation">
 
-            <div>
+            <button
+                className="previewGiftButton"
+                onClick={() => router.push("/gift/preview")}
+            >
+                ✨ Preview Experience
+            </button>
 
-                <p>Total</p>
+            <div className="bottomDivider"></div>
 
-                <h2>Rp25.000</h2>
+            <div className="bottomPrice">
+
+                <span>FREE</span>
 
             </div>
 
             <button
-                onClick={() => router.push("/payment")}
+                className="continueButton"
+                onClick={() => router.push("/donate")}
             >
                 Continue →
-            </button>
+            </button> 
 
         </div>
 

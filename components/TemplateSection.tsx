@@ -17,17 +17,17 @@ export default function TemplateSection() {
 
         <div
           className="templateCard"
-          onClick={() => router.push("/create/heart-of-memories")}
+          onClick={() => router.push("/create/free")}
         >
 
-          <img src="/templates/heart.jpg" alt="Heart of Memories" />
+          <img src="/templates/free.jpg" alt="Heart of Memories" />
 
-          <span className="premiumBadge">Premium</span>
+          <span className="premiumBadge">FREE</span>
 
-          <h3>Heart of Memories</h3>
+          <h3>Simple Bouquet</h3>
 
           <p>
-            Open heartfelt messages before discovering a beautiful bouquet.
+            A beautiful digital bouquet with a heartfelt message, completely free. 🌸
           </p>
 
           <button className="useTemplateBtn">

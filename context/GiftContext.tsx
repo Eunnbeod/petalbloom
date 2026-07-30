@@ -18,6 +18,8 @@ const defaultGift = {
   receiver: "",
   sender: "",
   bouquet: 1,
+  messageTitle: "",
+  message: "",
   journal: "closed",
   heart: "heart",
   musicBox: "closed",

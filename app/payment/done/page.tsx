@@ -52,7 +52,7 @@ function DoneContent() {
             <button>Preview Gift</button>
           </Link>
 
-          <Link href="/create">
+          <Link href="/templates">
             <button className={styles.secondaryButton}>
               Create Another
             </button>

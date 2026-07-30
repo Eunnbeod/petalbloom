@@ -17,7 +17,7 @@ export default function BouquetCard() {
 
       <div className="bouquetGrid">
 
-        {Array.from({ length: 9 }).map((_, index) => (
+        {Array.from({ length: 12 }).map((_, index) => (
 
           <div
             key={index}
@@ -33,7 +33,7 @@ export default function BouquetCard() {
       >
 
             <img
-              src={`/templates/heart_of_memories/bouquet${index + 1}.png`}
+              src={`/bouquets/bouquet${index + 1}.png`}
               alt=""
             />
 

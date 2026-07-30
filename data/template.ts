@@ -5,10 +5,10 @@ export const templates = [
     title:"Heart of Memories",
     slug:"heart-of-memories",
     category:"Love",
-    premium:true,
-    available:true,
+    type:"Premium",
+    available:false,
     image:"/templates/heart.jpg",
-    description:"Open heartfelt messages before discovering a beautiful bouquet."
+    description:"Open heartfelt letters before discovering your bouquet."
   },
 
   {
@@ -16,10 +16,10 @@ export const templates = [
     title:"Simple Bouquet",
     slug:"simple-bouquet",
     category:"Free",
-    premium:false,
+    type:"Free",
     available:true,
     image:"/templates/free.jpg",
-    description:"A simple bouquet for everyone."
+    description:"A beautiful bouquet for everyone."
   },
 
   {
@@ -27,10 +27,10 @@ export const templates = [
     title:"Mystery Gift Box",
     slug:"mystery-gift-box",
     category:"Birthday",
-    premium:true,
+    type:"Coming Soon",
     available:false,
     image:"/templates/mystery.jpg",
-    description:"Coming soon."
+    description:"Unlock surprises one by one."
   },
 
   {
@@ -38,10 +38,10 @@ export const templates = [
     title:"Orbit of Memories",
     slug:"orbit-of-memories",
     category:"Love",
-    premium:true,
+    type:"Coming Soon",
     available:false,
     image:"/templates/orbit.jpg",
-    description:"Coming soon."
+    description:"Watch memories orbit before blooming."
   }
 
 ];

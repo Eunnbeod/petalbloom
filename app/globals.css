@@ -199,7 +199,9 @@ body{
 
     z-index:2;
 
-    animation:float 5s ease-in-out infinite;
+    animation:
+        bouquetFloat 5s ease-in-out infinite,
+        bouquetGlow 3s ease-in-out infinite;
 
     transition:.4s;
 
@@ -226,6 +228,50 @@ body{
     border-radius:50%;
 
     opacity:.9;
+
+}
+
+@keyframes bouquetFloat{
+
+    0%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-14px);
+
+    }
+
+    100%{
+
+        transform:translateY(0);
+
+    }
+
+}
+
+@keyframes bouquetGlow{
+
+    0%{
+
+        filter:drop-shadow(0 0 0 rgba(255,210,120,0));
+
+    }
+
+    50%{
+
+        filter:drop-shadow(0 0 20px rgba(255,210,120,.35));
+
+    }
+
+    100%{
+
+        filter:drop-shadow(0 0 0 rgba(255,210,120,0));
+
+    }
 
 }
 
@@ -883,18 +929,29 @@ cursor:pointer;
 =========================== */
 
 .heartPage{
-    max-width:1400px;
+
+    max-width:820px;
+
     margin:auto;
-    padding:60px;
-    display:grid;
-    grid-template-columns:1.2fr 0.8fr;
-    gap:40px;
+
+    padding:60px 25px;
+
 }
 
 .heartForm{
+
     display:flex;
+
     flex-direction:column;
+
     gap:25px;
+
+}
+
+.heartPreview{
+
+    display:none;
+
 }
 
 .customCard{
@@ -2656,5 +2713,1787 @@ transform:translateY(0);
     font-size:15px;
 
   }
+
+}
+
+/* ================= FREE TEMPLATE ================= */
+
+.giftOpening{
+
+    min-height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:#FFF8FA;
+
+    padding:30px;
+
+}
+
+.openingCard{
+
+    background:white;
+
+    border-radius:30px;
+
+    padding:60px 40px;
+
+    max-width:500px;
+
+    text-align:center;
+
+    box-shadow:0 20px 45px rgba(0,0,0,.08);
+
+}
+
+.openingFlower{
+
+    font-size:70px;
+
+    margin-bottom:20px;
+
+}
+
+.openGiftButton{
+
+    margin-top:35px;
+
+    background:#F28BB2;
+
+    color:white;
+
+    border:none;
+
+    padding:16px 40px;
+
+    border-radius:999px;
+
+    font-size:17px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.openGiftButton:hover{
+
+    transform:translateY(-4px);
+
+}
+
+.freeGiftPage{
+
+    min-height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:#FFF8FA;
+
+    padding:30px;
+
+}
+
+
+
+.freeBouquet{
+
+    width:250px;
+
+    margin-bottom:30px;
+
+
+}
+
+.giftFrom{
+
+    color:#999;
+
+    margin:15px 0 30px;
+
+}
+
+.giftMessage{
+
+    line-height:1.9;
+
+    color:#555;
+
+}
+
+/* ================= GIFT ANIMATION ================= */
+
+.freeGiftCard{
+
+    animation:cardFade .8s ease;
+
+}
+
+.freeBouquet{
+
+    animation:bouquetFloat 7s ease-in-out infinite;
+
+    transform-origin:center bottom;
+
+    will-change:transform;
+
+}
+
+@keyframes cardFade{
+
+    from{
+
+        opacity:0;
+        transform:translateY(35px);
+
+    }
+
+    to{
+
+        opacity:1;
+        transform:translateY(0);
+
+    }
+
+}
+
+@keyframes bouquetPop{
+
+    0%{
+
+        opacity:0;
+        transform:scale(.7);
+
+    }
+
+    60%{
+
+        transform:scale(1.08);
+
+    }
+
+    100%{
+
+        opacity:1;
+        transform:scale(1);
+
+    }
+
+}
+
+@keyframes bouquetFloat{
+
+    0%{
+
+        transform:
+        translateY(0px)
+        rotate(0deg)
+        scale(1);
+
+    }
+
+    25%{
+
+        transform:
+        translateY(-6px)
+        rotate(-1deg)
+        scale(1.01);
+
+    }
+
+    50%{
+
+        transform:
+        translateY(0px)
+        rotate(1deg)
+        scale(1);
+
+    }
+
+    75%{
+
+        transform:
+        translateY(-4px)
+        rotate(-0.5deg)
+        scale(1.015);
+
+    }
+
+    100%{
+
+        transform:
+        translateY(0px)
+        rotate(0deg)
+        scale(1);
+
+    }
+
+}
+
+/* ================= PREMIUM GIFT ================= */
+
+.freeGiftPage{
+
+    min-height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:linear-gradient(180deg,#FFF8FB,#FFF1F6);
+
+    overflow:hidden;
+
+    position:relative;
+
+    padding:80px 20px;
+
+}
+
+.giftGlow{
+
+    position:absolute;
+
+    width:700px;
+
+    height:700px;
+
+    background:#ffd7e6;
+
+    border-radius:50%;
+
+    filter:blur(120px);
+
+    opacity:.55;
+
+    z-index:0;
+
+}
+
+.freeGiftCard{
+
+    position:relative;
+
+    z-index:2;
+
+    width:100%;
+
+    max-width:650px;
+
+    background:rgba(255,255,255,.88);
+
+    backdrop-filter:blur(20px);
+
+    border-radius:35px;
+
+    padding:60px 50px;
+
+    text-align:center;
+
+    box-shadow:0 30px 70px rgba(0,0,0,.08);
+
+}
+
+.giftDivider{
+
+    width:70px;
+
+    height:3px;
+
+    background:#F29AB2;
+
+    margin:25px auto;
+
+    border-radius:20px;
+
+}
+
+.giftFor{
+
+    color:#888;
+
+    letter-spacing:3px;
+
+    text-transform:uppercase;
+
+    font-size:13px;
+
+}
+
+.freeGiftCard h1{
+
+    margin:10px 0;
+
+    font-size:42px;
+
+    color:#2d2d2d;
+
+}
+
+.giftFrom{
+
+    color:#888;
+
+    margin-bottom:40px;
+
+    font-style:italic;
+
+}
+
+.messageCard{
+
+    background:#FFF7FA;
+
+    border-radius:24px;
+
+    padding:35px;
+
+    line-height:1.9;
+
+    border:1px solid #ffd7e6;
+
+}
+
+.messageCard h2{
+
+    color:#F28BB2;
+
+    margin-bottom:20px;
+
+}
+
+.giftFooter{
+
+    margin-top:45px;
+
+    color:#999;
+
+    font-size:14px;
+
+    line-height:1.8;
+
+}
+
+.decorFlower{
+
+    position:absolute;
+
+    width:90px;
+
+    opacity:.95;
+
+    pointer-events:none;
+
+    animation:flowerFloat 8s ease-in-out infinite;
+
+}
+
+.randomFlower{
+
+    position:absolute;
+
+    pointer-events:none;
+
+    user-select:none;
+
+    z-index:1;
+
+    animation:flowerFloat 9s ease-in-out infinite;
+
+}
+
+/* LEFT SIDE */
+
+.flower1{
+
+    width:65px;
+
+    left:30px;
+
+    top:40px;
+
+    transform:rotate(-18deg);
+
+}
+
+.flower2{
+
+    width:110px;
+
+    left:110px;
+
+    top:180px;
+
+    opacity:.55;
+
+    animation-duration:11s;
+
+}
+
+.flower3{
+
+    width:48px;
+
+    left:15px;
+
+    top:470px;
+
+    opacity:.9;
+
+}
+
+.flower4{
+
+    width:120px;
+
+    left:70px;
+
+    bottom:40px;
+
+    opacity:.45;
+
+    animation-duration:12s;
+
+}
+
+/* RIGHT SIDE */
+
+.flower5{
+
+    width:70px;
+
+    right:35px;
+
+    top:60px;
+
+    transform:rotate(20deg);
+
+}
+
+.flower6{
+
+    width:55px;
+
+    right:5px;
+
+    top:280px;
+
+}
+
+.flower7{
+
+    width:100px;
+
+    right:90px;
+
+    bottom:210px;
+
+    opacity:.55;
+
+}
+
+.flower8{
+
+    width:65px;
+
+    right:35px;
+
+    bottom:45px;
+
+}
+
+/* CLOSE TO CARD */
+
+.flower9{
+
+    width:40px;
+
+    left:23%;
+
+    top:140px;
+
+    opacity:.8;
+
+}
+
+.flower10{
+
+    width:55px;
+
+    right:23%;
+
+    top:120px;
+
+}
+
+.flower11{
+
+    width:45px;
+
+    left:24%;
+
+    bottom:170px;
+
+}
+
+.flower12{
+
+    width:52px;
+
+    right:25%;
+
+    bottom:130px;
+
+    opacity:.75;
+
+}
+
+@keyframes flowerFloat{
+
+    0%{
+
+        transform:
+        translateY(0px)
+        rotate(0deg);
+
+    }
+
+    25%{
+
+        transform:
+        translateY(-8px)
+        rotate(4deg);
+
+    }
+
+    50%{
+
+        transform:
+        translateY(2px)
+        rotate(-3deg);
+
+    }
+
+    75%{
+
+        transform:
+        translateY(-5px)
+        rotate(2deg);
+
+    }
+
+    100%{
+
+        transform:
+        translateY(0px)
+        rotate(0deg);
+
+    }
+
+}
+
+/* ================= SPARKLES ================= */
+
+
+.sparkle1{top:18%;left:38%;}
+.sparkle2{top:24%;right:34%;animation-delay:.4s;}
+.sparkle3{top:42%;left:32%;animation-delay:1s;}
+.sparkle4{top:35%;right:28%;animation-delay:1.6s;}
+.sparkle5{bottom:28%;left:36%;animation-delay:2.1s;}
+.sparkle6{bottom:22%;right:33%;animation-delay:2.8s;}
+.sparkle7{top:30%;left:48%;animation-delay:.9s;}
+.sparkle8{top:52%;right:43%;animation-delay:1.8s;}
+.sparkle9{bottom:35%;left:45%;animation-delay:2.4s;}
+.sparkle10{top:48%;left:55%;animation-delay:3s;}
+
+@keyframes sparkle{
+
+    0%{
+
+        opacity:0;
+
+        transform:scale(.2);
+
+    }
+
+    20%{
+
+        opacity:1;
+
+        transform:scale(1);
+
+    }
+
+    60%{
+
+        opacity:.8;
+
+        transform:translateY(-8px) scale(1.4);
+
+    }
+
+    100%{
+
+        opacity:0;
+
+        transform:translateY(-20px) scale(.2);
+
+    }
+
+}
+
+.messageFlower,
+.messageFlowerBottom{
+
+    color:#F29AB2;
+
+    font-size:26px;
+
+}
+
+.messageFlower{
+
+    margin-bottom:12px;
+
+}
+
+.messageFlowerBottom{
+
+    margin-top:20px;
+
+}
+
+
+/* ================= OPEN GIFT ================= */
+
+.openGiftScreen{
+
+    min-height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    position:relative;
+
+    overflow:hidden;
+
+    background:linear-gradient(180deg,#FFF8FB,#FFF1F6);
+
+    padding:30px;
+
+}
+
+.openGiftCard{
+
+    position:relative;
+
+    z-index:2;
+
+    width:100%;
+
+    max-width:560px;
+
+    text-align:center;
+
+    background:rgba(255,255,255,.88);
+
+    backdrop-filter:blur(18px);
+
+    border-radius:35px;
+
+    padding:70px 45px;
+
+    box-shadow:0 30px 70px rgba(0,0,0,.08);
+
+    animation:cardFade .8s ease;
+
+}
+
+.giftArrived{
+
+    color:#999;
+
+    font-size:16px;
+
+    letter-spacing:2px;
+
+    text-transform:uppercase;
+
+    margin-bottom:15px;
+
+}
+
+.openGiftCard h1{
+
+    font-size:46px;
+
+    color:#2b2b2b;
+
+    margin-bottom:45px;
+
+    line-height:1.15;
+
+}
+
+.openGiftButton{
+
+    background:#F28BB2;
+
+    color:white;
+
+    border:none;
+
+    border-radius:999px;
+
+    padding:18px 48px;
+
+    font-size:22px;
+
+    font-weight:700;
+
+    cursor:pointer;
+
+    transition:.35s;
+
+    animation:buttonBreath 3s ease-in-out infinite;
+
+}
+
+.openGiftButton:hover{
+
+    transform:translateY(-5px) scale(1.05);
+
+    box-shadow:0 18px 45px rgba(242,139,178,.45);
+
+}
+
+.giftMade{
+
+    margin-top:45px;
+
+    color:#999;
+
+    line-height:1.8;
+
+    font-size:15px;
+
+}
+
+@keyframes buttonBreath{
+
+    0%{
+
+        transform:scale(1);
+
+    }
+
+    50%{
+
+        transform:scale(1.04);
+
+    }
+
+    100%{
+
+        transform:scale(1);
+
+    }
+
+}
+
+.effectsGrid{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:18px;
+
+    margin-top:25px;
+
+}
+
+.effectButton{
+
+    background:white;
+
+    border:2px solid #f2d5df;
+
+    border-radius:22px;
+
+    padding:25px;
+
+    cursor:pointer;
+
+    transition:.35s;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:12px;
+
+}
+
+.effectButton div{
+
+    font-size:42px;
+
+}
+
+.effectButton span{
+
+    font-weight:600;
+
+}
+
+.effectButton:hover{
+
+    transform:translateY(-6px);
+
+    border-color:#F28BB2;
+
+    box-shadow:0 18px 40px rgba(242,139,178,.18);
+
+}
+
+.activeEffect{
+
+    background:#FFF4F8;
+
+    border-color:#F28BB2;
+
+    box-shadow:0 18px 45px rgba(242,139,178,.25);
+
+    transform:scale(1.03);
+
+}
+
+/* ================= FREE EDITOR ================= */
+
+.freeEditorPage{
+
+    max-width:850px;
+
+    margin:auto;
+
+    padding:60px 20px;
+
+}
+
+.freeEditorContainer{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:25px;
+
+}
+
+/* ================= SPARKLES ================= */
+
+.sparkle{
+
+    position:absolute;
+
+    color:#FFD66B;
+
+    font-size:12px;
+
+    pointer-events:none;
+
+    user-select:none;
+
+    z-index:3;
+
+    opacity:.2;
+
+    animation:sparkleFloat linear infinite;
+
+}
+
+@keyframes sparkleFloat{
+
+    0%{
+
+        transform:translateY(8px) scale(.7);
+
+        opacity:0;
+
+    }
+
+    30%{
+
+        opacity:.8;
+
+    }
+
+    60%{
+
+        transform:translateY(-10px) scale(1);
+
+    }
+
+    100%{
+
+        transform:translateY(-22px) scale(.7);
+
+        opacity:0;
+
+    }
+
+}
+
+
+/* ================= MAGIC PARTICLES ================= */
+
+.magicParticle{
+
+    position:absolute;
+
+    color:#FFD96A;
+
+    pointer-events:none;
+
+    user-select:none;
+
+    z-index:8;
+
+    text-shadow:
+        0 0 8px rgba(255,220,120,.9),
+        0 0 20px rgba(255,220,120,.7),
+        0 0 35px rgba(255,220,120,.5);
+
+    animation:magicFloat infinite ease-in-out;
+
+}
+
+@keyframes magicFloat{
+
+    0%{
+
+        opacity:0;
+
+        transform:
+            translateY(15px)
+            scale(.3)
+            rotate(0deg);
+
+    }
+
+    20%{
+
+        opacity:1;
+
+    }
+
+    50%{
+
+        transform:
+            translateY(-10px)
+            translateX(8px)
+            scale(1)
+            rotate(180deg);
+
+    }
+
+    80%{
+
+        opacity:.9;
+
+    }
+
+    100%{
+
+        opacity:0;
+
+        transform:
+            translateY(-35px)
+            translateX(-10px)
+            scale(.3)
+            rotate(360deg);
+
+    }
+
+}
+
+
+.bouquetArea{
+
+    position:relative;
+
+    width:420px;
+
+    margin:40px auto;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+.bouquetContainer{
+
+    position:relative;
+
+    width:360px;
+
+    height:360px;
+
+    margin:0 auto 30px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    overflow:visible;
+
+}
+
+/* ================= HEART EFFECT ================= */
+
+.floatingHeart{
+
+    position:absolute;
+
+    pointer-events:none;
+
+    user-select:none;
+
+    z-index:8;
+
+    animation:heartFloat ease-in-out infinite;
+
+    opacity:.85;
+
+    filter:drop-shadow(0 0 8px rgba(255,120,170,.35));
+
+}
+
+@keyframes heartFloat{
+
+    0%{
+
+        opacity:0;
+
+        transform:
+            translateY(20px)
+            translateX(0px)
+            scale(.5);
+
+    }
+
+    20%{
+
+        opacity:1;
+
+    }
+
+    50%{
+
+        transform:
+            translateY(-15px)
+            translateX(8px)
+            scale(1);
+
+    }
+
+    75%{
+
+        transform:
+            translateY(-28px)
+            translateX(-8px)
+            scale(.9);
+
+    }
+
+    100%{
+
+        opacity:0;
+
+        transform:
+            translateY(-45px)
+            translateX(6px)
+            scale(.5);
+
+    }
+
+}
+
+/* ================= PINK BLOSSOM ================= */
+
+.pinkParticle{
+
+    position:fixed;   /* <-- change from absolute */
+
+    display:block;
+
+    border-radius:50%;
+
+    background:#FFB7CF;
+
+    pointer-events:none;
+
+    z-index:8;
+
+    transform:translate(-50%,-50%);
+
+    box-shadow:
+        0 0 8px rgba(255,183,207,.9),
+        0 0 18px rgba(255,183,207,.6);
+
+    animation:blossomFloat ease-in-out infinite;
+
+}
+
+@keyframes blossomFloat{
+
+    0%{
+
+        opacity:0;
+
+        transform:
+            translateY(15px)
+            translateX(0)
+            scale(.3);
+
+    }
+
+    20%{
+
+        opacity:1;
+
+    }
+
+    50%{
+
+        transform:
+            translateY(-12px)
+            translateX(8px)
+            scale(1);
+
+    }
+
+    100%{
+
+        opacity:0;
+
+        transform:
+            translateY(-40px)
+            translateX(-6px)
+            scale(.3);
+
+    }
+
+}
+
+/* ================= STARS ================= */
+
+.floatingStar{
+
+    position:absolute;
+
+    color:#FFF8C8;
+
+    pointer-events:none;
+
+    user-select:none;
+
+    z-index:8;
+
+    text-shadow:
+        0 0 10px rgba(255,248,200,.9),
+        0 0 22px rgba(255,248,200,.7);
+
+    animation:starFloat ease-in-out infinite;
+
+}
+
+@keyframes starFloat{
+
+    0%{
+
+        opacity:0;
+
+        transform:
+            translateY(18px)
+            scale(.4)
+            rotate(0deg);
+
+    }
+
+    20%{
+
+        opacity:1;
+
+    }
+
+    50%{
+
+        transform:
+            translateY(-10px)
+            translateX(8px)
+            scale(1);
+
+    }
+
+    100%{
+
+        opacity:0;
+
+        transform:
+            translateY(-45px)
+            translateX(-6px)
+            scale(.4)
+            rotate(180deg);
+
+    }
+
+}
+
+.bottomNavigation{
+
+    background:white;
+
+    border-radius:28px;
+
+    padding:28px;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.06);
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:20px;
+
+}
+
+.previewGiftButton{
+
+    width:100%;
+
+    border:none;
+
+    background:#FFF4F8;
+
+    color:#F28BB2;
+
+    padding:18px;
+
+    border-radius:18px;
+
+    font-weight:700;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.previewGiftButton:hover{
+
+    transform:translateY(-2px);
+
+    background:#FFE8F0;
+
+}
+
+.bottomDivider{
+
+    height:1px;
+
+    background:#eee;
+
+}
+
+.bottomPrice{
+
+    text-align:center;
+
+}
+
+.bottomPrice span{
+
+    display:inline-block;
+
+    background:#E9FFF1;
+
+    color:#2F9E5A;
+
+    padding:10px 22px;
+
+    border-radius:999px;
+
+    font-weight:700;
+
+}
+
+.continueButton{
+
+    width:100%;
+
+    border:none;
+
+    background:#F28BB2;
+
+    color:white;
+
+    padding:18px;
+
+    border-radius:18px;
+
+    font-size:17px;
+
+    font-weight:700;
+
+    cursor:pointer;
+
+}
+
+.backEditorButton{
+
+    position:fixed;
+
+    top:30px;
+
+    left:30px;
+
+    border:none;
+
+    background:white;
+
+    padding:14px 24px;
+
+    border-radius:999px;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+    cursor:pointer;
+
+    font-weight:600;
+
+    z-index:999;
+
+    transition:.3s;
+
+}
+
+.backEditorButton:hover{
+
+    transform:translateY(-3px);
+
+}
+
+.freeGiftPage{
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+.bouquetContainer{
+
+    position:relative;
+
+    z-index:20;
+
+}
+
+.donatePage{
+
+    min-height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:40px;
+
+    background:linear-gradient(180deg,#FFF8FB,#FFF);
+
+}
+
+.donateCard{
+
+    width:100%;
+    max-width:650px;
+
+    background:white;
+
+    border-radius:30px;
+
+    padding:50px;
+
+    text-align:center;
+
+    box-shadow:0 20px 60px rgba(0,0,0,.08);
+
+}
+
+.donateBadge{
+
+    display:inline-block;
+
+    padding:8px 18px;
+
+    border-radius:999px;
+
+    background:#FFEAF3;
+
+    color:#F28BB2;
+
+    font-weight:600;
+
+}
+
+.donationGrid{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:15px;
+
+    margin:40px 0;
+
+}
+
+.donationOption{
+
+    padding:20px;
+
+    border-radius:18px;
+
+    border:2px solid #F5D7E6;
+
+    background:white;
+
+    cursor:pointer;
+
+    transition:.25s;
+
+}
+
+.donationOption:hover{
+
+    transform:translateY(-3px);
+
+}
+
+.donationOption.active{
+
+    background:#F28BB2;
+
+    color:white;
+
+    border-color:#F28BB2;
+
+}
+
+.continueDonation{
+
+    width:100%;
+
+    border:none;
+
+    background:#F28BB2;
+
+    color:white;
+
+    padding:18px;
+
+    border-radius:18px;
+
+    font-size:16px;
+
+    font-weight:700;
+
+    cursor:pointer;
+
+}
+
+.donatePaymentPage{
+
+    min-height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:40px;
+
+    background:#FFF8FB;
+
+}
+
+.donatePaymentCard{
+
+    width:100%;
+
+    max-width:700px;
+
+    background:white;
+
+    border-radius:30px;
+
+    padding:50px;
+
+    box-shadow:0 20px 60px rgba(0,0,0,.08);
+
+    text-align:center;
+
+}
+
+.donatePaymentCard h2{
+
+    margin-top:20px;
+
+    color:#F28BB2;
+
+    font-size:40px;
+
+}
+
+.verificationNotice{
+
+    margin:30px 0;
+
+    padding:22px;
+
+    border-radius:20px;
+
+    background:#FFF5F8;
+
+    border:2px solid #FFD8E6;
+
+    text-align:left;
+
+}
+
+.verificationNotice h3{
+
+    margin-bottom:12px;
+
+    color:#E96B9E;
+
+}
+
+.verificationNotice p{
+
+    line-height:1.7;
+
+    color:#666;
+
+}
+
+.paymentMethodsGrid{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:20px;
+
+    margin-top:35px;
+
+}
+
+.paymentMethodCard{
+
+    border:2px solid #F4D7E5;
+
+    border-radius:22px;
+
+    padding:25px;
+
+    cursor:pointer;
+
+    transition:.25s;
+
+}
+
+.paymentMethodCard:hover{
+
+    transform:translateY(-5px);
+
+    border-color:#F28BB2;
+
+    box-shadow:0 15px 35px rgba(242,139,178,.18);
+
+}
+
+.paymentMethodCard img{
+
+    width:60px;
+
+    height:60px;
+
+    object-fit:contain;
+
+    margin-bottom:15px;
+
+}
+
+.paymentMethodCard.active{
+
+    border-color:#F28BB2;
+
+    box-shadow:0 18px 40px rgba(242,139,178,.25);
+
+    transform:translateY(-5px);
+
+}
+
+.paymentInstruction{
+
+    margin-top:35px;
+
+    padding:25px;
+
+    border-radius:22px;
+
+    background:#FFF9FC;
+
+}
+
+.paymentQR{
+
+    width:250px;
+
+    margin-top:20px;
+
+    border-radius:20px;
+
+}
+
+.supportMethods{
+
+display:flex;
+
+flex-direction:column;
+
+gap:18px;
+
+margin-top:35px;
+
+}
+
+.supportMethod{
+
+padding:24px;
+
+border-radius:22px;
+
+background:white;
+
+border:2px solid #F6D9E7;
+
+cursor:pointer;
+
+transition:.25s;
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+}
+
+.supportMethod:hover{
+
+transform:translateY(-5px);
+
+border-color:#F28BB2;
+
+box-shadow:0 15px 35px rgba(242,139,178,.18);
+
+}
+
+.supportMethod h3{
+
+margin-bottom:6px;
+
+}
+
+.supportArrow{
+
+font-size:30px;
+
+color:#F28BB2;
+
+}
+
+.supportSubtitle{
+
+    margin-top:18px;
+
+    font-size:17px;
+
+    color:#666;
+
+    line-height:1.8;
+
+}
+
+.finishDonationButton{
+
+    width:100%;
+
+    margin-top:40px;
+
+    padding:18px;
+
+    border:none;
+
+    border-radius:20px;
+
+    background:#F28BB2;
+
+    color:white;
+
+    font-size:17px;
+
+    font-weight:700;
+
+    cursor:pointer;
+
+    transition:.25s;
+
+}
+
+.finishDonationButton:hover{
+
+    transform:translateY(-2px);
+
+    background:#EC76A6;
 
 }
